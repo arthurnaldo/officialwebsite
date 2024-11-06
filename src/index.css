@@ -1,0 +1,20 @@
+/* src/index.css or src/Header.css */
+.header {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    min-height: 60px; /* Set a minimum height for the header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden;
+    margin: 0;
+  }
+  

@@ -1,0 +1,60 @@
+/* src/Skills.css */
+
+.skills {
+    background-color: rgba(255, 255, 255, 0.8);  /* Slight background to contrast with clouds */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 800px;
+    text-align: left;
+    margin-left: auto;    /* Center horizontally */
+    margin-right: auto;   /* Center horizontally */
+  }
+  
+  .skills h2 {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;   /* Center the title */
+  }
+  
+  .skills-section {
+    display: flex;
+    flex-direction: column;  /* Stack the sections vertically */
+    gap: 5px;               /* Space between sections */
+  }
+  
+  .skills-category {
+    display: flex;
+    flex-wrap: wrap;  /* Allow skills to wrap to the next line */
+    justify-content: space-between;  /* Evenly distribute space between items */
+    margin-bottom: 1px;
+    padding: 7px;
+    text-align: center;
+  }
+  
+  .skills-category h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 1px;
+  }
+  
+  .skills-category ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;  /* Allow skills to wrap */
+    justify-content: space-between;  /* Even space between each skill */
+    gap: 15px;  /* Ensure equal space between each skill */
+  }
+  
+  .skills-category li {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 2px;
+    flex: 1 1 50px;  /* Flex-grow, flex-shrink, and flex-basis for equal distribution */
+    text-align: center;
+  }
+  
