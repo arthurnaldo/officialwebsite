@@ -52,3 +52,11 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+.App {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  transition: background-color 4s ease;
+}
+

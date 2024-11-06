@@ -1,5 +1,5 @@
-// Header.jsx
 import React, { useState, useEffect } from 'react';
+import '../Header.css';
 
 function Header() {
   const messages = [
@@ -9,7 +9,7 @@ function Header() {
   ];
   const [text, setText] = useState('');
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
-  
+
   useEffect(() => {
     let index = 0;
     const currentMessage = messages[currentMessageIndex];
@@ -24,7 +24,7 @@ function Header() {
           setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messages.length); // Loop through messages
         }, 1000); // Wait for 1 second before starting next message
       }
-    }, 150); // Typing speed (adjust as needed)
+    }, 150); // Typing speed
 
     return () => clearInterval(interval); // Cleanup the interval when the component unmounts
   }, [currentMessageIndex]); // Depend on currentMessageIndex to restart when it changes
