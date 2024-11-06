@@ -9,7 +9,7 @@ const experiences = [
     role: 'Incoming Software Engineering Intern',
     duration: 'May 2025 – Aug. 2025',
     location: 'San Francisco, CA',
-    description: 'Incoming software engineering intern at Atlassian. Jira FTW',
+    description: 'Incoming software engineering intern at Atlassian. Jira FTW:)))',
     link: 'https://www.atlassian.com'
   },
   {
