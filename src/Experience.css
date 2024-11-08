@@ -1,64 +1,113 @@
-/* src/Experience.css */
+/* Apply box-sizing to all elements inside the experience section */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
 
+/* Main Experience Section */
 .experience {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 900px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-  
-  .experience h2 {
-    font-size: 1.5em;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .experience-container {
-    display: flex;
-    flex-direction: column;  /* Stack experiences vertically */
-    gap: 20px;  /* Space between experiences */
-  }
-  
-  .experience-box {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    transition: all 0.3s ease;
-  }
-  
-  .experience-box:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Hover effect */
-  }
-  
-  .experience-box h3 {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .experience-box p {
-    font-size: 1.0em;
-    color: #555;
-    margin-bottom: 10px;
-  }
-  
-  .experience-box a {
-    font-size: 1.1em;
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .experience-box a:hover {
-    text-decoration: underline;
-  }
-  
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: 95%;
+  max-width: 1200px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Center content inside the experience section */
+}
+
+/* Container for Experience Boxes */
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all experience boxes horizontally */
+  gap: 20px;
+}
+
+/* Individual Experience Box */
+.experience-box {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+  max-width: 1100px; /* Keep this to limit the maximum width */
+  margin: 0 auto; /* Center each box within the container */
+}
+.experience-box h2 {
+  font-size: 1.5em; /* Adjust this value to your desired font size */
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px; /* Space between header and content */
+}
+
+
+/* Experience Logo */
+.experience-logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px; /* Space below the logo */
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+  cursor: pointer; /* Makes the logo clickable */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Hover effect to scale the logo */
+.experience-logo:hover {
+  transform: scale(1.1); /* Increase size by 10% */
+}
+
+/* Ensure the anchor tag (link) around the logo takes up the full space of the logo */
+.experience-logo a {
+  display: block; /* Makes the anchor tag fill the entire logo space */
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* Remove underline */
+}
+
+/* Experience Header (e.g., Job Title) */
+.experience-box h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px; /* Space between job title and description */
+}
+
+/* Experience Paragraphs (e.g., Description, Duration, Location) */
+.experience-box p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
+.experience-box p:last-child {
+  margin-bottom: 0; /* Remove margin for the last paragraph */
+}
+
+/* Inner Content for Each Experience Box */
+.experience-box .experience-info {
+  display: block; /* Stack content vertically */
+  width: 100%;
+  text-align: center; /* Center content inside the experience-info */
+}
+
+/* Position Style (e.g., Job Title) */
+.experience-box .experience-info .position {
+  font-weight: bold;
+}
+
+/* Duration and Location Styles */
+.experience-box .experience-info .duration,
+.experience-box .experience-info .location {
+  color: #777;
+  font-size: 0.9em;
+}

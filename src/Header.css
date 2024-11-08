@@ -1,7 +1,20 @@
 /* Import Google Font for cool, subtle futuristic look */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap');
 
-/* Header styling */
+/* Header container */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;  /* Ensure the header takes up the full screen height */
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;  /* Prevent padding from affecting layout */
+  overflow: hidden;  /* Prevent text from overflowing */
+}
+
+/* Header text */
 .header h1 {
   font-family: 'Exo 2', sans-serif; /* Apply Exo 2 font */
   font-size: 2.5em;
@@ -10,4 +23,23 @@
   padding: 0;
   font-weight: 700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Lighter shadow for subtle effect */
+  white-space: nowrap;  /* Prevent text from breaking into multiple lines */
+  overflow: hidden;  /* Hide overflowing text */
+  text-overflow: ellipsis;  /* Add ellipsis if text overflows */
+  display: inline-block; /* To make the text size behave like a block element */
+  width: auto;  /* Allow text to flow naturally */
+}
+
+/* Typing effect (when hovering over the header) */
+.header:hover h1 {
+  animation: typing 2s steps(30) 1; /* Typing effect */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }

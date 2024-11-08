@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import '../Header.css';
 
 function Header() {
+
   const messages = [
     "Hi, I'm Atharv!",
-    "AI/ML enthusiast",
-    "Software developer"
+    "AI/ML Enthusiast",
+    "Software Developer"
   ];
   const [text, setText] = useState('');
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
