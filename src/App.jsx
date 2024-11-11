@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar'; // Import the Navbar component
+import Research from './components/Research';
 
 function App() {
   // Set a constant background color without any scroll effect
@@ -27,6 +28,9 @@ function App() {
       </section>
       <section id="projects">
         <Projects />
+      </section>
+      <section id="research">
+        <Research />
       </section>
       <Footer />
     </div>

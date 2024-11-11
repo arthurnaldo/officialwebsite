@@ -11,6 +11,7 @@ function Navbar() {
           <li><a href="#skills">Skills</a></li>
           <li><a href="#experience">Work Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href='#research'>Research</a></li>
         </ul>
       </nav>
     </header>
