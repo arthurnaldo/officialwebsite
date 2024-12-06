@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/officialwebsite/static/css/main.057addec.css",
-    "main.js": "/officialwebsite/static/js/main.fe8203cd.js",
+    "main.js": "/officialwebsite/static/js/main.aa0b0f8b.js",
     "static/media/atlassian.png": "/officialwebsite/static/media/atlassian.32b026e2b9e6cc237474.png",
     "static/media/sweden.jpg": "/officialwebsite/static/media/sweden.9adb982884daee48d87e.jpg",
     "index.html": "/officialwebsite/index.html",
     "main.057addec.css.map": "/officialwebsite/static/css/main.057addec.css.map",
-    "main.fe8203cd.js.map": "/officialwebsite/static/js/main.fe8203cd.js.map"
+    "main.aa0b0f8b.js.map": "/officialwebsite/static/js/main.aa0b0f8b.js.map"
   },
   "entrypoints": [
     "static/css/main.057addec.css",
-    "static/js/main.fe8203cd.js"
+    "static/js/main.aa0b0f8b.js"
   ]
 }
