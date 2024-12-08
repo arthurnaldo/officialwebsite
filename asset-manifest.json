@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/officialwebsite/static/css/main.c728d6d3.css",
-    "main.js": "/officialwebsite/static/js/main.aa0b0f8b.js",
+    "main.css": "/officialwebsite/static/css/main.e55f346a.css",
+    "main.js": "/officialwebsite/static/js/main.875c85c6.js",
     "static/media/atlassian.png": "/officialwebsite/static/media/atlassian.32b026e2b9e6cc237474.png",
     "static/media/sweden.jpg": "/officialwebsite/static/media/sweden.9adb982884daee48d87e.jpg",
+    "static/media/MoodMap.png": "/officialwebsite/static/media/MoodMap.f55957e0eac2f047ca69.png",
     "index.html": "/officialwebsite/index.html",
-    "main.c728d6d3.css.map": "/officialwebsite/static/css/main.c728d6d3.css.map",
-    "main.aa0b0f8b.js.map": "/officialwebsite/static/js/main.aa0b0f8b.js.map"
+    "main.e55f346a.css.map": "/officialwebsite/static/css/main.e55f346a.css.map",
+    "main.875c85c6.js.map": "/officialwebsite/static/js/main.875c85c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.c728d6d3.css",
-    "static/js/main.aa0b0f8b.js"
+    "static/css/main.e55f346a.css",
+    "static/js/main.875c85c6.js"
   ]
 }
