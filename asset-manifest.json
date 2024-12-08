@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/officialwebsite/static/css/main.e55f346a.css",
+    "main.css": "/officialwebsite/static/css/main.94afbc30.css",
     "main.js": "/officialwebsite/static/js/main.584288f0.js",
     "static/media/childhood.jpg": "/officialwebsite/static/media/childhood.37d404600726a367dbf7.jpg",
     "static/media/atlassian.png": "/officialwebsite/static/media/atlassian.32b026e2b9e6cc237474.png",
     "static/media/MoodMap.png": "/officialwebsite/static/media/MoodMap.f55957e0eac2f047ca69.png",
     "index.html": "/officialwebsite/index.html",
-    "main.e55f346a.css.map": "/officialwebsite/static/css/main.e55f346a.css.map",
+    "main.94afbc30.css.map": "/officialwebsite/static/css/main.94afbc30.css.map",
     "main.584288f0.js.map": "/officialwebsite/static/js/main.584288f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.e55f346a.css",
+    "static/css/main.94afbc30.css",
     "static/js/main.584288f0.js"
   ]
 }
