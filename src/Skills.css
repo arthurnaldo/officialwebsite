@@ -2,47 +2,53 @@
 
 /* General styling for the section */
 .skills {
-  background-color: rgba(255, 255, 255, 0.8); /* Slight background to contrast with clouds */
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
+  background-color: #000000; /* Light background for consistency */
+  padding: 5% 10%;
+  border-radius: 15px;
+  margin-top: 3rem;
   width: 100%;
-  max-width: 1100px;
+  max-width: 100%; /* Ensure full width */
   text-align: left;
-  margin-left: auto; /* Center horizontally */
-  margin-right: auto; /* Center horizontally */
+  margin-left: 0; /* Ensure full-width */
+  margin-right: 0; /* Ensure full-width */
+  font-family: 'Inter', sans-serif; /* Consistent font */
 }
 
+/* Heading style */
 .skills h2 {
-  font-size: 1.5em;
-  color: #333;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center; /* Center the title */
+  font-size: 4rem;
+  color: #1d68f2; /* Dark text color */
+  font-weight: 700;
+  margin-bottom: 2rem; /* Adjust this margin if needed */
+  text-align: center;
+  font-family: 'Roboto', sans-serif; /* Consistent font for headings */
+  border: none; /* Ensure there's no border */
+  padding-bottom: 0; /* Remove any padding that might cause the line */
 }
+
 
 /* Flexbox for the skills section */
 .skills-section {
   display: flex;
-  flex-direction: column; /* Stack the categories vertically */
-  gap: 5px; /* Reduced gap between categories */
-  align-items: center; /* Center the skills categories horizontally */
+  flex-wrap: wrap; /* Allow categories to wrap */
+  gap: 2rem; /* Space between categories */
+  justify-content: space-between; /* Distribute categories across screen */
 }
 
 .skills-category {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap in the container */
-  justify-content: center; /* Center items horizontally */
-  gap: 5px; /* Reduced gap between skills */
-  padding: 5px;
-  text-align: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30%; /* Each category takes 30% of screen */
 }
 
 .skills-category h3 {
-  font-size: 1.2em;
-  color: #333;
-  margin-bottom: 5px; /* Reduced margin */
+  font-size: 1.8rem;
+  color: #1d68f2;
+  margin-bottom: 1rem;
+  font-weight: 600;
   width: 100%;
+  text-align: left;
 }
 
 .skills-category ul {
@@ -50,44 +56,50 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center skills within the category */
-  gap: 5px; /* Reduced gap between skills */
+  justify-content: flex-start; /* Align skills to the left */
+  gap: 1rem;
 }
 
 .skills-category li {
-  font-size: 1em;
-  color: #555;
-  padding: 5px 10px;
-  border: 2px solid #124ef3;
-  border-radius: 5px;
-  background-color: #fff;
+  font-size: 1.1rem;
+  color: #2b2d42;
+  padding: 0.8rem 1.2rem;
+  border: 2px solid #2b2d42;
+  border-radius: 25px;
+  background-color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   text-align: center;
+  font-weight: 500;
 }
 
+.skills-category li:hover {
+  background-color: #2b2d42;
+  color: #ffffff;
+}
+
+/* Link styling inside list items */
 .skills-category li a {
   text-decoration: none;
-  color: #1629f4;
-  font-weight: 500;
+  color: #2b2d42;
+  font-weight: 600;
   display: block;
   padding: 5px 10px;
 }
 
-.skills-category li:hover {
-  background-color: #b98715;
-  color: white;
+.skills-category li:hover a {
+  color: #ffffff;
 }
 
 /* Media Queries for responsiveness */
 @media (max-width: 1024px) {
   .skills-category {
-    justify-content: center; /* Center items on medium screens */
+    width: 45%; /* Adjust category width for medium screens */
   }
 }
 
 @media (max-width: 768px) {
   .skills-category {
-    justify-content: center; /* Center items on small screens */
+    width: 100%; /* Stack categories on small screens */
   }
 }

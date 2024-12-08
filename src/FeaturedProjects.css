@@ -1,0 +1,147 @@
+.featured-projects {
+  background-color: #000000;
+  color: #1d68f2;
+  padding: 5% 10%;
+  text-align: center;
+  width: 100%;
+}
+
+.featured-projects h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #1d68f2;
+  margin-bottom: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #1d68f2;
+  padding: 3rem 2rem; /* Increased padding for larger card */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-info {
+  position: relative;
+  z-index: 10; /* Ensure text is on top of the image */
+  width: 60%;  /* Increased width to allow for more text space */
+  padding-left: 2rem; /* Padding on left to keep text away from image */
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.project-info h2 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.project-info p {
+  font-size: 1.3rem;
+  color: white;
+  margin: 1.5rem 0;
+  line-height: 1.6;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.tech {
+  background-color: #e4e6e9;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #2b2d42;
+  font-weight: 600;
+}
+
+.project-links {
+  margin-top: 1.5rem;
+}
+
+.project-link {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.project-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.project-card:hover .project-info {
+  transform: translateX(-10px); /* Slide the text slightly left on hover */
+}
+
+.project-image-container {
+  position: relative;
+  width: 40%; /* Fixed width for the image */
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1); /* Reset zoom effect on hover */
+}
+
+.project-card:hover .project-info {
+  color: #e4e6e9; /* Lighten text on hover */
+}
+
+.project-link:hover {
+  color: #0056b3;
+}
+
+.project-link:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-info {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .project-image-container {
+    width: 100%;
+  }
+
+  .project-image {
+    transform: scale(1);
+  }
+}

@@ -1,38 +1,82 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { FaTwitter, FaReddit, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import '../Header.css';
 
 function Header() {
-
-  const messages = [
-    "Hi, I'm Atharv!",
-    "AI/ML Enthusiast",
-    "Software Developer"
-  ];
   const [text, setText] = useState('');
-  const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const [cursorVisible, setCursorVisible] = useState(true);
+  const [nameIndex, setNameIndex] = useState(0);
+  const names = ['Atharv', 'Arthur']; 
+  const typingSpeed = 250;
+  const backspacingSpeed = 150;
+  const gapTime = 2000;
+  const nameDelay = 3000;
 
   useEffect(() => {
-    let index = 0;
-    const currentMessage = messages[currentMessageIndex];
-    const interval = setInterval(() => {
-      setText((prevText) => prevText + currentMessage[index]);
-      index += 1;
-      if (index === currentMessage.length) {
-        clearInterval(interval);
-        // Wait before starting the next message
-        setTimeout(() => {
-          setText('');
-          setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messages.length); // Loop through messages
-        }, 1000); // Wait for 1 second before starting next message
-      }
-    }, 150); // Typing speed
+    let typingInterval;
+    let backspacingInterval;
+    let switchTimeout;
 
-    return () => clearInterval(interval); // Cleanup the interval when the component unmounts
-  }, [currentMessageIndex]); // Depend on currentMessageIndex to restart when it changes
+    const typeAndBackspace = () => {
+      if (isTyping && text.length < names[nameIndex].length) {
+        setText((prevText) => prevText + names[nameIndex][text.length]);
+      } else if (!isTyping && text.length > 0) {
+        setText((prevText) => prevText.slice(0, prevText.length - 1));
+      } else if (text.length === names[nameIndex].length) {
+        setIsTyping(false);
+        setCursorVisible(false);
+        switchTimeout = setTimeout(() => {
+          setIsTyping(true);
+          setCursorVisible(true);
+        }, gapTime);
+      } else if (text.length === 0) {
+        setNameIndex((prevIndex) => (prevIndex + 1) % names.length);
+        switchTimeout = setTimeout(() => {
+          setIsTyping(true);
+        }, nameDelay);
+      }
+    };
+
+    if (isTyping) {
+      typingInterval = setInterval(() => {
+        typeAndBackspace();
+      }, typingSpeed);
+    } else {
+      backspacingInterval = setInterval(() => {
+        typeAndBackspace();
+      }, backspacingSpeed);
+    }
+
+    return () => {
+      clearInterval(typingInterval);
+      clearInterval(backspacingInterval);
+      clearTimeout(switchTimeout);
+    };
+  }, [text, isTyping, nameIndex]);
 
   return (
     <header className="header">
-      <h1>{text}</h1>
+      <div className="header-content">
+        <h1>Hi, I'm {text}<span className={`cursor ${cursorVisible ? 'visible' : ''}`}>|</span></h1>
+        <p>Student, AI/ML Researcher, Developer</p>
+        <div className="icons">
+          <a href="https://www.instagram.com/atharvnna/" target="_blank" rel="noopener noreferrer" className="icon">
+            <FaInstagram />
+          </a>
+          <a href="https://www.linkedin.com/in/atharvn/" target="_blank" rel="noopener noreferrer" className="icon">
+            <FaLinkedin />
+          </a>
+          <a href="https://twitter.com/atharvnaidu123" target="_blank" rel="noopener noreferrer" className="icon">
+            <FaTwitter />
+          </a>
+          <a href="https://github.com/atharvnaidu" target="_blank" rel="noopener noreferrer" className="icon">
+            <FaGithub />
+          </a>
+        </div>
+      </div>
+      {/* Add the design-right div here */}
+      <div className="design-right"></div>
     </header>
   );
 }

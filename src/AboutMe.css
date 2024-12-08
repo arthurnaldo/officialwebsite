@@ -1,25 +1,190 @@
-/* src/aboutme.css */
+/* Main container for the About Me section */
 .about-me {
-    display: flex;              /* Use flexbox */
-    flex-direction: column;     /* Stack the items vertically */
-    justify-content: center;    /* Center vertically */
-    align-items: center;        /* Center horizontally */
-    height: 20vh;              /* Take up full viewport height */
-    text-align: center;         /* Center the text */
-    margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 150vh;
+  padding: 0 5%;
+  background: #000000; /* Dark green background */
+  color: #bbbbbb; /* Default text color */
+  font-family: 'Roboto', sans-serif; /* Consistent modern font */
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+/* Left side with profile image */
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Stack image and caption vertically */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem; /* Space below image on smaller screens */
+}
+
+.profile-pic {
+  width: 100%; /* Scales the image responsively */
+  max-width: 600px; /* Consistent image size */
+  height: auto; /* Maintains aspect ratio */
+  border: 5px solid #bbbbbb; /* White border for a clean look */
+  object-fit: cover; /* Ensures image is well-cropped */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Deeper shadow for modern feel */
+}
+
+/* Styling for the image caption */
+.image-caption {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #d0d0d0; /* Softer light gray */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-top: 1rem; /* Adjust spacing from the image */
+  letter-spacing: 0.5px;
+}
+
+/* Right side with description */
+.right-side {
+  flex: 1;
+  padding-left: 2rem;
+  text-align: left;
+}
+
+/* Title styling */
+.right-side h2 {
+  font-size: 5rem;
+  color: #1d68f2; /* Accent color */
+  text-shadow: 3px 3px 8px rgba(88, 7, 7, 0.7); /* Stronger text shadow for emphasis */
+  font-family: 'Roboto', sans-serif; /* Clean and modern font */
+  font-weight: 700; /* Bold for emphasis */
+  margin: 0;
+  margin-bottom: 2rem;
+  text-transform: none; /* No uppercase */
+  letter-spacing: 2px; /* Added spacing for elegance */
+  border: none;
+}
+
+/* Body text styling */
+.right-side p {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #d0d0d0; /* Softer light gray instead of pure white */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Link Styling */
+.right-side a {
+  color: #1da1f2; /* Accent color */
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.right-side a:hover {
+  text-decoration: underline;
+  color: #00aced; /* Lighter blue on hover */
+}
+
+/* Read More Button Styling */
+.read-more-btn {
+  background-color: #1d68f2; /* Button color */
+  color: #ffffff; /* Text color */
+  font-size: 1.5rem;
+  padding: 1.2rem 2.5rem; /* Slightly larger button for prominence */
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600; /* Bolder text for emphasis */
+  transition: all 0.3s ease;
+  margin-top: 2.5rem; /* More space above button */
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 10px 20px rgba(230, 0, 0, 0.2); /* Strong shadow for depth */
+}
+
+.read-more-btn:hover {
+  background-color: #00aced;
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
+
+.read-more-btn:focus {
+  outline: none;
+  border: 2px solid #ffffff; /* White border on focus */
+}
+
+.read-more-btn:active {
+  background-color: #0088cc; /* Darker shade when clicked */
+  transform: translateY(2px); /* Push effect when clicked */
+}
+
+/* Optional: Global styles for consistency across pages */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #ffffff; /* Default text color */
+  background: #2b2d42; /* Consistent dark background */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .right-side h2 {
+    font-size: 3.2rem; /* Adjust for medium screens */
   }
-  
-  #about-me h2 {
-    font-size: 1.5em;
-    color: #333;
-    font-weight: bold;
+
+  .right-side p {
+    font-size: 1.5rem; /* Adjust text size for medium screens */
   }
-  
-  #about-me p {
-    font-size: 1em;
-    color: #555;
-    max-width: 1000px;
-    margin: 10px auto;
-    line-height: 1.4;
+
+  .left-side {
+    margin-bottom: 1rem;
   }
-  
+}
+
+@media (max-width: 1100px) {
+  /* Stack elements vertically on smaller screens */
+  .about-me {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 2rem 5%;
+  }
+
+  .left-side {
+    margin-bottom: 2rem;
+  }
+
+  .profile-pic {
+    width: 80%; /* Scale image down */
+    max-width: 300px;
+  }
+
+  .right-side {
+    padding-left: 0;
+  }
+
+  .right-side h2 {
+    font-size: 2.8rem;
+  }
+
+  .right-side p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust for extra small screens */
+  .right-side h2 {
+    font-size: 2.2rem;
+  }
+
+  .right-side p {
+    font-size: 1.1rem;
+  }
+}

@@ -1,45 +1,148 @@
-/* Import Google Font for cool, subtle futuristic look */
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap');
-
-/* Header container */
+/* Main container for the Header section */
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;  /* Ensure the header takes up the full screen height */
+  position: relative;
   width: 100%;
-  text-align: center;
-  padding: 0 20px;
-  box-sizing: border-box;  /* Prevent padding from affecting layout */
-  overflow: hidden;  /* Prevent text from overflowing */
+  height: 55vh;
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: row; /* Default layout: text and design side by side */
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center; /* Vertically center content */
+  padding: 0 5%;
+  background: #000000; /* Dark background */
+  overflow: hidden; /* Prevent elements from overflowing */
 }
 
-/* Header text */
-.header h1 {
-  font-family: 'Exo 2', sans-serif; /* Apply Exo 2 font */
-  font-size: 2.5em;
-  color: #333;
+/* Right side custom design */
+.header .design-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%; /* Take up 40% of the width */
+  height: 100%; /* Full height */
+  background: linear-gradient(135deg, #ff7a00, #ff0077); /* Gradient background */
+  z-index: -1; /* Keep it behind the text */
+  opacity: 0.7; /* Slight transparency */
+  border-radius: 0 50% 50% 0; /* Rounded corners */
+}
+
+/* Adding abstract shapes */
+.header .design-right::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.header .design-right::after {
+  content: '';
+  position: absolute;
+  bottom: 30%;
+  left: 10%;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .header .design-right {
+    width: 100%; /* Full width on smaller screens */
+    height: 30%; /* Adjust height for small screens */
+    border-radius: 0;
+  }
+}
+
+/* Header content container */
+.header-content {
+  max-width: 600px;
+  text-align: left; /* Default text alignment for larger screens */
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    text-align: center; /* Center text on smaller screens */
+  }
+}
+
+/* Main title */
+.header-content h1 {
   margin: 0;
-  padding: 0;
+  font-size: 6rem; /* Large size for the main title */
   font-weight: 700;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Lighter shadow for subtle effect */
-  white-space: nowrap;  /* Prevent text from breaking into multiple lines */
-  overflow: hidden;  /* Hide overflowing text */
-  text-overflow: ellipsis;  /* Add ellipsis if text overflows */
-  display: inline-block; /* To make the text size behave like a block element */
-  width: auto;  /* Allow text to flow naturally */
+  text-align: left;
+  display: inline-block;
 }
 
-/* Typing effect (when hovering over the header) */
-.header:hover h1 {
-  animation: typing 2s steps(30) 1; /* Typing effect */
+/* Cursor animation */
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 2rem;
+  background-color: white;
+  margin-left: 5px;
+  animation: blink 0.7s infinite step-end; /* Blink effect */
 }
 
-@keyframes typing {
-  from {
-    width: 0;
+/* Blink effect for cursor */
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
-  to {
-    width: 100%;
+}
+
+/* Subtitle */
+.header-content p {
+  margin: 0.5rem 0 0;
+  font-size: 2rem; /* Smaller font for the subtitle */
+  font-weight: 400;
+  color: #bbbbbb; /* Slightly lighter color for contrast */
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .header-content h1 {
+    text-align: center; /* Center title on smaller screens */
+    font-size: 5rem;
   }
+}
+
+/* Social icons container */
+.icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .icons {
+    justify-content: center; /* Center social icons on smaller screens */
+  }
+}
+
+/* Individual icon */
+.icon {
+  color: white;
+  font-size: 2.5rem;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #1da1f2; /* Twitter blue */
 }

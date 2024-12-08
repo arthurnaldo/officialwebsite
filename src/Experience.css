@@ -1,113 +1,85 @@
-/* Apply box-sizing to all elements inside the experience section */
-*,
-*::before,
-*::after {
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
-}
-
-/* Main Experience Section */
+/* General styling for the section */
 .experience {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  width: 95%;
-  max-width: 1200px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center; /* Center content inside the experience section */
+  background-color: #000000; /* Match Skills section background */
+  padding: 5% 0;
+  width: 100%; /* Full width of the parent container */
+  max-width: 1200px; /* Limit the width to a maximum of 1200px */
+  margin: 0 auto; /* Center the section */
+  font-family: 'Inter', sans-serif;
+  color: rgb(0, 0, 0);
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
-/* Container for Experience Boxes */
-.experience-container {
+/* Heading style */
+.experience h2 {
+  border: none;
+  font-size: 4rem;
+  color: #1d68f2;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Grid container for Experience Boxes */
+.experience-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamically fit boxes */
+  gap: 2rem; /* Space between boxes */
+  padding: 0 5%; /* Add padding on the sides */
+  width: 100%; /* Full width of container */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Individual Experience Entry */
+.experience-entry {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center all experience boxes horizontally */
-  gap: 20px;
+  align-items: flex-start;
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid #2b2d42;
+  text-align: left;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  height: 100%; /* Ensure consistent height for boxes */
 }
 
-/* Individual Experience Box */
-.experience-box {
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-  align-items: center; /* Center content horizontally */
-  background-color: #f7f7f7;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  text-align: center;
-  width: 100%;
-  max-width: 1100px; /* Keep this to limit the maximum width */
-  margin: 0 auto; /* Center each box within the container */
+.experience-entry:hover {
+  background-color: #2b2d42;
+  transform: scale(1.03);
 }
-.experience-box h2 {
-  font-size: 1.5em; /* Adjust this value to your desired font size */
-  color: #333;
-  font-weight: bold;
-  margin-bottom: 20px; /* Space between header and content */
-}
-
 
 /* Experience Logo */
 .experience-logo {
   width: 100px;
   height: 100px;
-  margin-bottom: 15px; /* Space below the logo */
   object-fit: contain;
-  border-radius: 8px;
-  flex-shrink: 0;
-  cursor: pointer; /* Makes the logo clickable */
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  margin-bottom: 1rem;
+  border-radius: 10px;
 }
 
-/* Hover effect to scale the logo */
-.experience-logo:hover {
-  transform: scale(1.1); /* Increase size by 10% */
+/* Experience Information */
+.experience-info h3 {
+  font-size: 1.8rem;
+  color: #1d68f2;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-/* Ensure the anchor tag (link) around the logo takes up the full space of the logo */
-.experience-logo a {
-  display: block; /* Makes the anchor tag fill the entire logo space */
-  width: 100%;
-  height: 100%;
-  text-decoration: none; /* Remove underline */
+.experience-info p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
 }
 
-/* Experience Header (e.g., Job Title) */
-.experience-box h3 {
-  font-size: 1.2em;
-  color: #333;
-  margin-bottom: 10px; /* Space between job title and description */
-}
-
-/* Experience Paragraphs (e.g., Description, Duration, Location) */
-.experience-box p {
-  font-size: 1em;
-  color: #555;
-  margin-bottom: 10px; /* Space between paragraphs */
-}
-
-.experience-box p:last-child {
-  margin-bottom: 0; /* Remove margin for the last paragraph */
-}
-
-/* Inner Content for Each Experience Box */
-.experience-box .experience-info {
-  display: block; /* Stack content vertically */
-  width: 100%;
-  text-align: center; /* Center content inside the experience-info */
-}
-
-/* Position Style (e.g., Job Title) */
-.experience-box .experience-info .position {
+.experience-info .duration {
   font-weight: bold;
+  color: #aaaaaa;
 }
 
-/* Duration and Location Styles */
-.experience-box .experience-info .duration,
-.experience-box .experience-info .location {
-  color: #777;
-  font-size: 0.9em;
+/* Full-width Responsiveness */
+@media (max-width: 768px) {
+  .experience-box {
+    grid-template-columns: 1fr; /* Single column for small screens */
+  }
 }

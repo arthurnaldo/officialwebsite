@@ -5,7 +5,7 @@ import "../Skills.css";
 function Skills() {
   return (
     <section className="skills">
-      <h2>My Skills</h2>
+      <h2>Technology I Use</h2>
       <div className="skills-section">
         <div className="skills-category">
           <h3>Programming Languages:</h3>
