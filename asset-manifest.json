@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/officialwebsite/static/css/main.91e83665.css",
+    "main.css": "/officialwebsite/static/css/main.f3cbe2a2.css",
     "main.js": "/officialwebsite/static/js/main.6e917f0b.js",
     "static/media/childhood.jpg": "/officialwebsite/static/media/childhood.37d404600726a367dbf7.jpg",
     "static/media/VibeLens.png": "/officialwebsite/static/media/VibeLens.3f290cbe650b6b3bbfbc.png",
@@ -8,11 +8,11 @@
     "static/media/atlassian.png": "/officialwebsite/static/media/atlassian.32b026e2b9e6cc237474.png",
     "static/media/MoodMap.png": "/officialwebsite/static/media/MoodMap.f55957e0eac2f047ca69.png",
     "index.html": "/officialwebsite/index.html",
-    "main.91e83665.css.map": "/officialwebsite/static/css/main.91e83665.css.map",
+    "main.f3cbe2a2.css.map": "/officialwebsite/static/css/main.f3cbe2a2.css.map",
     "main.6e917f0b.js.map": "/officialwebsite/static/js/main.6e917f0b.js.map"
   },
   "entrypoints": [
-    "static/css/main.91e83665.css",
+    "static/css/main.f3cbe2a2.css",
     "static/js/main.6e917f0b.js"
   ]
 }
