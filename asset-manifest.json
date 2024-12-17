@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/officialwebsite/static/css/main.10d45f8f.css",
-    "main.js": "/officialwebsite/static/js/main.c9d3dad4.js",
+    "main.css": "/officialwebsite/static/css/main.97798916.css",
+    "main.js": "/officialwebsite/static/js/main.fc6808a6.js",
     "static/media/childhood.jpg": "/officialwebsite/static/media/childhood.37d404600726a367dbf7.jpg",
     "static/media/VibeLens.png": "/officialwebsite/static/media/VibeLens.3f290cbe650b6b3bbfbc.png",
     "static/media/DiscordFriendMapper.png": "/officialwebsite/static/media/DiscordFriendMapper.ae572cddfde538e9e907.png",
+    "static/media/atlassian.png": "/officialwebsite/static/media/atlassian.32b026e2b9e6cc237474.png",
     "static/media/MoodMap.png": "/officialwebsite/static/media/MoodMap.f55957e0eac2f047ca69.png",
     "index.html": "/officialwebsite/index.html",
-    "main.10d45f8f.css.map": "/officialwebsite/static/css/main.10d45f8f.css.map",
-    "main.c9d3dad4.js.map": "/officialwebsite/static/js/main.c9d3dad4.js.map"
+    "main.97798916.css.map": "/officialwebsite/static/css/main.97798916.css.map",
+    "main.fc6808a6.js.map": "/officialwebsite/static/js/main.fc6808a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.10d45f8f.css",
-    "static/js/main.c9d3dad4.js"
+    "static/css/main.97798916.css",
+    "static/js/main.fc6808a6.js"
   ]
 }
